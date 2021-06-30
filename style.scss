@@ -1,0 +1,399 @@
+// ____________
+$purple: #7a3fa8;
+$light-purple: #b395cc;
+$gray: #939393;
+$white: #ffffff;
+$black: #000000;
+$border: #E1DFDF;
+$error-bc: #FEFDEF;
+$body-bc: #E6E9F0;
+$order-sum-bc: #F2F4F7;
+
+@mixin flex-row-between() {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@mixin subtotal-titles() {
+    margin-bottom: 5px;
+
+        &:last-child{
+            margin: 0;
+        }
+}
+
+@mixin general-styles() {
+    &__title{
+        margin: 10px 0;
+
+        font-size: 30px;
+
+        color: $purple;
+    }
+
+    &__subtitle{
+        font-size: 18px;
+
+        color: $purple;
+    }
+
+    &__inputs{
+        @include flex-column();
+
+        margin-top: 5px;
+    }
+
+    &__input{
+        padding: 10px;
+
+        width: 100%;
+
+        font-size: 16px;
+
+        border: 2px solid $border;
+        border-radius: 5px;
+
+        &::placeholder{
+            font-size: 16px;
+
+            color: $gray;
+        }
+    }
+
+    &__submit{
+        padding: 13px 10px;
+
+        width: 180px;
+
+        color: $white;
+        font-size: 16px;
+
+        background-color: $purple;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    letter-spacing: -0.05px;
+
+    background-color: $body-bc;
+}
+
+.registration-order{
+    @include flex-row-center();
+
+    height: 100%;
+
+    color: $gray;
+
+    &__shipping-info{
+        padding: 10px 40px;
+
+        width: 430px;
+        height: 600px;
+
+        background-color: $white;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &__order-summary{
+        padding: 10px 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 330px;
+        height: 600px;
+
+        background-color: $order-sum-bc;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.nav{
+    &__list{
+        padding: 0;
+
+        display: flex;
+
+        font-size: 15px;
+        list-style: none;
+    }
+
+    &__li:not(:last-child):after{
+        margin: 0 10px;
+
+        content: '>';
+    }
+}
+
+.form2,
+.form3,
+.form4{
+    display: none;
+}
+
+.form1,
+.form2,
+.form3 {
+    @include flex-column();
+    @include general-styles();
+
+    &__city{
+        position: relative;
+    }
+
+    &__location{
+        position: absolute;
+        top: 10px;
+        right: 10;
+    }
+
+    &__country{
+        display: flex;
+        gap: 25px;
+    }
+
+    &__zip{
+        width: 130px;
+    }
+}
+
+.form3{
+    @include general-styles();
+
+    &__wrappers{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__wrapper{
+        width: 105px;
+    }
+
+    &__locker{
+        display: inline-block;
+        vertical-align: bottom;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.form4{
+    @include flex-column();
+
+    color: $black;
+    font-size: 18px;
+
+    &__title{
+        margin: 10px 0;
+
+        color: $purple;
+        font-size: 30px;
+    }
+
+    &__order-num,
+    &__delivery-day{
+        font-weight: bold;
+    }
+
+    &__print{
+        color: $purple;
+        text-decoration: underline;
+        font-size: 16px;
+    }
+
+    &__put-email{
+        color: $purple;
+        text-decoration: underline;
+    }
+}
+
+.main-summary{
+    @include flex-column();
+
+    gap: 10px;
+
+    hr{
+        width: 100%;
+
+        border-bottom: 1px solid $border;
+    }
+}
+
+.header-summary{
+    @include flex-row-between();
+
+    padding: 0 10px;
+
+    align-items: flex-end;
+
+    &__title{
+        margin-bottom: 0;
+
+        color: $purple;
+        font-size: 20px;
+        
+    }
+
+    &__span{
+        text-decoration: underline
+    }
+}
+
+.container{
+    @include flex-row-between();
+
+    padding: 0 10px;
+
+    font-size: 14px;
+
+    &__left{
+        display: flex;
+        gap: 10px;
+    }
+
+    &__img{
+        width: 50px;
+        height: 50px;
+    }
+
+    &__img-size{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        border: 1px solid $border;
+    }
+
+    &__info{
+        @include flex-column();
+
+        gap: 1px;
+
+        p{
+            margin: 0;
+        }
+    }
+
+    &__color-thing,
+    &__quantity{
+        color: $black;
+        font-size: 12px;
+    }
+
+    &__price{
+        margin: 0;
+    }
+}
+
+.line{
+    border-bottom: 2px solid $border;
+}
+
+.subtotal-price{
+    @include flex-row-between();
+
+    padding: 0 10px;
+    
+    &__title--left {
+        @include subtotal-titles();
+
+        text-align: left;
+    }
+
+    &__title--right {
+        @include subtotal-titles();
+
+        text-align: right;
+    }
+}
+
+.total-price{
+    @include flex-row-between();
+
+    padding: 0 10px;
+
+    color: $purple;
+    font-size: 16px;
+    font-weight: bold;
+
+    &__title{
+        margin: 0;
+    }
+}
+
+.footer-summary{
+    font-size: 12px;
+    text-align: center;
+
+    &__span_underline{
+        text-decoration: underline;
+    }
+}
+
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+    background: $purple!important;
+    border: 1px solid $purple!important;
+}
+
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight {
+    color: $white!important;
+    
+    background: $light-purple!important;
+    border: 1px solid $light-purple!important;
+}
+
+// js styles
+
+.mistake{
+    background-color: $error-bc;
+}
+
+.close{
+    display: none;
+}
+
+.open{
+    display: flex;
+}
+
+.color{
+    color: $purple;
+}
+
+.wrapper-transparent{
+    background-color: #ffffff82;
+}
+
+.z-index{
+    z-index: -100;
+}

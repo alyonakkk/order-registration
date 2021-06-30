@@ -1,0 +1,273 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+
+<body>
+    <div class="my-container">
+        <div class="registration-order">
+            <!-- order registration -->
+            <div class="registration-order__shipping-info">
+                <nav class="nav js-nav">
+                    <ul class="nav__list">
+                        <li class="nav__li js-li1 color">Shipping</li>
+                        <li class="nav__li js-li2">Billing</li>
+                        <li class="nav__li js-li3">Payment</li>
+                    </ul>
+                </nav>
+
+                <!-- form 1 -->
+                <form class="form1 js-form1" action="">
+                    <div class="form1__header">
+                        <p class="form1__title">Shipping Info</p>
+                    </div>
+
+                    <div class="form1__recipient">
+                        <label class="form1__subtitle" for="recipient">Recipient</label>
+                        <div class="form1__inputs">
+                            <input class="form1__input js-input1" id="recipient" name="recipient" type="text"
+                                placeholder="Full Name">
+                            <input class="form1__input js-input1" id="recipient" name="recipient" type="text"
+                                placeholder="DayTime Phone">
+                        </div>
+                    </div>
+
+                    <div class="form1__address">
+                        <label class="form1__subtitle" for="address">Address</label>
+                        <div class="form1__inputs">
+                            <input class="form1__input js-input1" id="address" name="address" type="text"
+                                placeholder="Street Address">
+                            <input class="form1__input" id="address" name="address" type="text"
+                                placeholder="Apt, Suite, Bldg, Gate Code (optional)">
+                            <div class="form1__city">
+                                <input class="form1__input js-input1 js-city" id="address" name="address" type="text"
+                                    placeholder="City">
+                                <div class="form1__location">
+                                    <img src="/img/227580-24.png" alt="location">
+                                </div>
+                            </div>
+                            <div class="form1__country">
+                                <input class="form1__input js-country js-input1" id="address" name="address" type="text"
+                                    placeholder="Country">
+                                <input class="form1__input js-input1" id="address" name="address" type="text"
+                                    placeholder="Zip">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form1__button">
+                        <input class="form1__submit js-submit" type="submit" id="submit" name="submit" value="Continue">
+                    </div>
+                </form>
+
+                <!-- form 2 -->
+                <form class="form2 js-form2" action="">
+                    <div class="form2__header">
+                        <p class="form2__title">Billing Information</p>
+                    </div>
+
+                    <div class="form2__contact">
+                        <label class="form2__subtitle" for="contact">Billing Contact</label>
+                        <div class="form2__inputs">
+                            <input class="form2__input js-input2" id="contact" name="contact" type="text"
+                                placeholder="Full Name">
+                            <input class="form2__input js-email-address js-input2" id="contact" name="contact"
+                                type="text" placeholder="Email Address">
+                        </div>
+                    </div>
+
+                    <div class="form2__address">
+                        <label class="form2__subtitle" for="address">Billing Address</label>
+                        <div class="form2__inputs">
+                            <input class="form2__input js-input2" id="address" name="address" type="text"
+                                placeholder="Street Address">
+                            <input class="form2__input" id="address" name="address" type="text"
+                                placeholder="Apt, Suite, Bldg, Gate Code (optional)">
+                            <div class=" form2__city">
+                                <input class="form2__input js-input2 js-city" id="address" name="address" type="text"
+                                    placeholder="City">
+                                <div class="form1__location">
+                                    <img src="/img/227580-24.png" alt="location">
+                                </div>
+                            </div>
+                            <div class="form2__country">
+                                <input class="form2__input js-country js-input2" id="address" name="address" type="text"
+                                    placeholder="Country">
+                                <input class="form2__input js-input2" id="address" name="address" type="text"
+                                    placeholder="Zip">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form2__button">
+                        <input class="form2__submit js-submit" id="submit" name="submit" type="submit" value="Continue">
+                    </div>
+                </form>
+
+                <!-- form 3 -->
+                <form class="form3 js-form3" action="">
+                    <div class="form3__header">
+                        <p class="form3__title">Payment</p>
+                        <div class="">
+                            <img class="form3__locker" src="/img/iconfinder_285646_lock_icon_512px.png" alt="locker">
+                            <span class="form3__span">This is a secure 128-bit SSL encrypted payment</span>
+                        </div>
+                    </div>
+
+                    <div class="form3__card-name">
+                        <label class="form3__subtitle" for="card-name">Cardholder Name</label>
+                        <div class="form3__inputs">
+                            <input class="form3__input js-input3" id="card-name" name="card-name" type="text"
+                                placeholder="Name as it appears on your card">
+                        </div>
+                    </div>
+
+                    <div class="form3__card-num">
+                        <label class="form3__subtitle" for="">Card Number</label>
+                        <div class="form3__inputs">
+                            <input class="form3__input js-card-num js-input3" id="card-num" name="card-num" type="text"
+                                placeholder="XXXX XXXX XXXX XXXX">
+                        </div>
+                    </div>
+
+                    <div class="form3__wrappers">
+                        <div class="form3__wrapper">
+                            <label class="form3__subtitle" for="wrapper">Expire Date</label>
+                            <div class="form3__inputs">
+                                <input class="form3__input js-input3 js-datepicker" id="wrapper" name="wrapper"
+                                    type="text" placeholder="MM / YY">
+                            </div>
+                        </div>
+                        <div class="form3__wrapper">
+                            <label class="form3__subtitle" for="wrapper">Security Code</label>
+                            <div class="form3__inputs">
+                                <input class="form3__input js-card-code js-input3" id="wrapper" name="wrapper"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form3__button">
+                        <input class="form3__submit js-submit" id="submit" name="submit" type="submit"
+                            value="Pay Securely">
+                    </div>
+                </form>
+
+                <!-- form 4 -->
+                <form class="form4 js-form4" action="">
+                    <div class="form4__header">
+                        <p class="form4__title">Thank you for your order!</p>
+                    </div>
+
+                    <div class="form4__order-info">
+                        <p class="form4__order-num">Order number is: 188787788</p>
+                        <p class="form4__order-email">Your will recieve an email confirmation shortly to <span
+                                class="form4__put-email js-put-email"></span></p>
+                        <p class="form4__del-day">Estimated delivery Day is <span
+                                class="form4__delivery-day js-delivery-day"></span></p>
+                        <span class="form4__print">Print Recipe</span>
+                    </div>
+                </form>
+            </div>
+
+            <!-- order summary -->
+            <div class="registration-order__order-summary js-order-summary">
+                <div class="main-summary js-main-summary">
+                    <div class="header-summary">
+                        <p class="header-summary__title">Order Summary</p>
+                        <span class="header-summary__span">edit order</span>
+                    </div>
+
+                    <div class="container">
+                        <div class="container__left">
+                            <div class="container__img">
+                                <img class="container__img-size" src="/img/martens.jpg" alt="martens">
+                            </div>
+                            <div class="container__info">
+                                <p class="container__name-thing">The Chelsea Boot</p>
+                                <p class="container__color-thing">Black</p>
+                                <p class="container__quantity">Quantity: 1</p>
+                            </div>
+                        </div>
+                        <div class="container__right">
+                            <p class="container__price">$235</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="container">
+                        <div class="container__left">
+                            <div class="container__img">
+                                <img class="container__img-size" src="/img/backpack.jpg" alt="backpack">
+                            </div>
+                            <div class="container__info">
+                                <p class="container__name-thing">The Twill Snap Backpack</p>
+                                <p class="container__color-thing">Reverse Denim + Brown leather</p>
+                                <p class="container__quantity">Quantity: 1</p>
+                            </div>
+                        </div>
+                        <div class="container__right">
+                            <p class="container__price">$65</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="container">
+                        <div class="container__left">
+                            <div class="container__img">
+                                <img class="container__img-size" src="/img/tote.jpg" alt="tote">
+                            </div>
+                            <div class="container__info">
+                                <p class="container__name-thing">The Twill Snap Backpack</p>
+                                <p class="container__color-thing">Reverse Denim + Brown leather</p>
+                                <p class="container__quantity">Quantity: 1</p>
+                            </div>
+                        </div>
+                        <div class="container__right">
+                            <p class="container__price">$48</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="subtotal-price">
+                        <div class="subtotal-price__left">
+                            <p class="subtotal-price__title--left">Subtotal</p>
+                            <p class="subtotal-price__title--left">Shipping</p>
+                            <p class="subtotal-price__title--left">Taxes</p>
+                        </div>
+
+                        <div class="subtotal-price__right">
+                            <p class="subtotal-price__title--right">$398</p>
+                            <p class="subtotal-price__title--right">Free</p>
+                            <p class="subtotal-price__title--right">$12.12</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="total-price">
+                        <p class="total-price__title">Total</p>
+                        <p class="total-price__title">$410.12</p>
+                    </div>
+                </div>
+
+                <div class="footer-summary">
+                    <span class="footer-summary__span">All purchases are subject to our <span
+                            class="footer-summary__span_underline">Term and Conditions</span>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- yandex maps -->
+<script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://snipp.ru/cdn/maskedinput/jquery.maskedinput.min.js"></script>
+<!-- js -->
+<script src="script.js"></script>
+
+</html>
