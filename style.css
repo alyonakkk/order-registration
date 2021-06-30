@@ -64,12 +64,6 @@ body {
   content: '>';
 }
 
-.form2,
-.form3,
-.form4 {
-  display: none;
-}
-
 .form1,
 .form2,
 .form3 {
@@ -477,6 +471,12 @@ a.ui-button:active,
   color: #ffffff !important;
   background: #b395cc !important;
   border: 1px solid #b395cc !important;
+}
+
+.form2,
+.form3,
+.form4 {
+  display: none;
 }
 
 .mistake {

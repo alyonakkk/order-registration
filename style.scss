@@ -147,12 +147,6 @@ body{
     }
 }
 
-.form2,
-.form3,
-.form4{
-    display: none;
-}
-
 .form1,
 .form2,
 .form3 {
@@ -373,6 +367,12 @@ a.ui-button:active,
 }
 
 // js styles
+
+.form2,
+.form3,
+.form4{
+    display: none;
+}
 
 .mistake{
     background-color: $error-bc;
